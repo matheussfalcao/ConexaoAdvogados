@@ -1,12 +1,12 @@
-# config/routes.rb
 Rails.application.routes.draw do
-  
+  get 'lawyers/verify_oab', to: 'lawyers#verify_oab'
+
   devise_for :users
   root to: "pages#home"
-  get "sobre", to:"about#sobre"
-  get "adv", to:"about#adv"
+  get "sobre", to: "about#sobre"
+  get "adv", to: "about#adv"
 
-  get "up" => "rails/health#show", as: :rails_health_check
+  get "up", to: "rails/health#show", as: :rails_health_check
 
   resources :lawyers do
     collection do

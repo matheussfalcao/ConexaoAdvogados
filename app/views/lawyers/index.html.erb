@@ -1,0 +1,14 @@
+<!-- app/views/lawyers/index.html.erb -->
+
+<h1>Bem-vindo ao Sistema de Cadastro</h1>
+
+<%= form_tag(choose_role_path, method: 'get') do %>
+  <div>
+    <%= label_tag 'role', 'Eu sou:' %>
+    <%= select_tag 'role', options_for_select(['Advogado', 'Cliente']) %>
+  </div>
+  
+  <div class="actions">
+    <%= submit_tag 'Selecionar', class: 'btn btn-primary' %>
+  </div>
+<% end %>

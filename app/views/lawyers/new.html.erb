@@ -1,0 +1,19 @@
+<!-- app/views/lawyers/new.html.erb -->
+
+<h1>Cadastro de Advogado</h1>
+
+<%= form_with(model: @lawyer, local: true) do |form| %>
+  <%= form.label :nome, 'Nome:' %>
+  <%= form.text_field :nome, required: true %>
+  
+  <%= form.label :sobrenome, 'Sobrenome:' %>
+  <%= form.text_field :sobrenome, required: true %>
+  
+  <%= form.label :cpf, 'CPF:' %>
+  <%= form.text_field :cpf, required: true %>
+  
+  <%= form.label :oab, 'OAB:' %>
+  <%= form.text_field :oab, required: true %>
+  
+  <%= form.submit 'Cadastrar' %>
+<% end %>

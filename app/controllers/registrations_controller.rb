@@ -3,8 +3,9 @@ class RegistrationsController < Devise::RegistrationsController
     build_resource(sign_up_params)
 
     if resource.save
-      # Send welcome email with confirmation link
-      ConfirmationMailer.confirmation_instructions(resource).deliver_now
+      # Send confirmation instructions using Devise method
+      resource.send_confirmation_instructions
+
       redirect_to pending_confirmation_path
     else
       Rails.logger.debug { "User creation failed: #{resource.errors.full_messages.join(", ")}" }

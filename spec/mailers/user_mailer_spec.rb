@@ -1,5 +1,5 @@
-
 require 'rails_helper'
+
 RSpec.describe RegistrationsController, type: :controller do
   before do
     @request.env["devise.mapping"] = Devise.mappings[:user]
@@ -31,7 +31,7 @@ RSpec.describe RegistrationsController, type: :controller do
       }
     end
 
-    it 'creates a new user and sends confirmation email' do
+    it 'creates a new user and sends confirmation emails' do
       expect {
         post :create, params: valid_params
       }.to change(User, :count).by(1)
@@ -39,13 +39,15 @@ RSpec.describe RegistrationsController, type: :controller do
       user = User.last
       expect(user.confirmed_at).to be_nil 
 
-      
       expect(response).to redirect_to(pending_confirmation_path)
 
       
-      expect(ActionMailer::Base.deliveries.count).to eq(1)
-      expect(ActionMailer::Base.deliveries.last.subject).to eq('Confirmation instructions')
-      expect(ActionMailer::Base.deliveries.last.to).to eq([user.email])
+      expect(ActionMailer::Base.deliveries.count).to eq(2)
+
+      
+      confirmation_email = ActionMailer::Base.deliveries.last
+      expect(confirmation_email.subject).to eq('Confirmation instructions')
+      expect(confirmation_email.to).to eq([user.email])
     end
   end
 end

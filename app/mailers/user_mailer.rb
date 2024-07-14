@@ -1,7 +1,6 @@
-
-class UserMailer < ApplicationMailer
-  def welcome(user)
-    @user = user
-    mail(to: @user.email, subject: 'Bem-vindo ao Conexão Advogados')
+class ConfirmationMailer < Devise::Mailer
+  def confirmation_instructions(record, token, opts={})
+    @token = token
+    devise_mail(record, :confirmation_instructions, opts)
   end
 end

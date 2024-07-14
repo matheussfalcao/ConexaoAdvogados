@@ -1,9 +1,7 @@
 
-class ConfirmationMailer < ApplicationMailer
-  def welcome_email(user, token)
-    @user = user
+class ConfirmationMailer < Devise::Mailer
+  def confirmation_instructions(record, token, opts={})
     @token = token
-
-    mail(to: @user.email, subject: 'Confirmação de e-mail')
+    devise_mail(record, :confirmation_instructions, opts)
   end
 end

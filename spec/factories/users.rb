@@ -1,3 +1,7 @@
+# spec/factories/users.rb
+
+require 'faker'
+
 FactoryBot.define do
   factory :user do
     name { 'Raquel' }
@@ -9,12 +13,16 @@ FactoryBot.define do
     city { 'São Paulo' }
     state { 'SP' }
     phone { '11987654321' }
-    email { 'test@example.com' }
+    email { Faker::Internet.email }
     password { 'password123' }
     password_confirmation { 'password123' }
     terms_of_use { '1' }
     confirmed_at { nil }
     confirmation_token { Devise.friendly_token[0, 20] }
     confirmation_sent_at { Time.current }
+  end
+
+  trait :confirmed do
+    confirmed_at { Time.current }
   end
 end

@@ -1,11 +1,10 @@
+# app/models/user.rb
+
 class User < ApplicationRecord
-  
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :validatable, :confirmable
 
-  
   attr_accessor :unconfirmed_email
 
-  
   validates :name, presence: true
   validates :lastname, presence: true
   validates :cpf, presence: true, uniqueness: true
@@ -19,15 +18,14 @@ class User < ApplicationRecord
   validates :password, presence: true, confirmation: true
   validates :terms_of_use, acceptance: { allow_nil: false, message: 'Você precisa aceitar os termos de uso' }
 
-  
-  def confirmation_sent_at
-    self[:confirmation_sent_at] || created_at if confirmed?
+  def confirmed?
+    self.confirmed_at.present?
   end
 
-  def confirmation_sent_at=(value)
-    self[:confirmation_sent_at] = value
-  end
-  def confirmed?
-    self.confirmed_at.present? 
+  def confirm
+    return if confirmed?
+
+    self.confirmed_at = Time.current
+    save!(validate: false)
   end
 end

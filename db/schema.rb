@@ -14,41 +14,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_16_232752) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "clients", force: :cascade do |t|
-    t.string "name"
-    t.string "lastname"
-    t.string "cpf"
-    t.string "rg"
-    t.string "sex"
-    t.date "birth_date"
-    t.string "state"
-    t.string "city"
-    t.string "phone"
-    t.string "email"
-    t.string "password_digest"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "lawyers", force: :cascade do |t|
-    t.string "name"
-    t.string "lastname"
-    t.string "cpf"
-    t.string "oab"
-    t.string "rg"
-    t.string "sex"
-    t.date "birth_date"
-    t.string "state"
-    t.string "city"
-    t.string "phone"
-    t.string "email"
-    t.string "password_digest"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "role"
-    t.boolean "terms_of_use"
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false

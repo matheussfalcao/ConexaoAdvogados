@@ -1,0 +1,11 @@
+.left-aligned-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 0.8;
+}
+
+
+.left-aligned-column a:nth-of-type(3) {
+  line-height: normal; /* ou qualquer valor desejado */
+}

@@ -16,7 +16,7 @@
             <div class="centered-horizontal" style="justify-content: space-between; width:636px;">
               <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
               <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-                <%= link_to "Sign up", new_registration_path(resource_name), style:"width: 100px;" %><br />
+                <%= link_to "Sig up", new_registration_path(resource_name), style:"width: 100px;" %><br />
               <% end %>
             </div>
           </div>

@@ -1,1 +1,55 @@
-// Specific CSS for your home-page
+.home-container {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.home-banner {
+  width: 100%;
+  height: 650px;
+  position: relative;
+  overflow: hidden;
+}
+
+.increase {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  top: 0;
+  left: 0;
+  background-color: #01385d;
+  color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+.home-image-banner {
+  border-radius: 0 0px 100px 100px;
+}
+
+.text-banner {
+  position: absolute;
+  // font-family: "Open Sans";
+  top: 130px;
+  left: 112px;
+  max-width: 550px;
+  height: 176px;
+  z-index: 1;
+  color: #fff;
+  line-height: 36px;
+
+  h1 {
+    font-weight: 700;
+  }
+
+  p {
+    font-weight: 600;
+  }
+
+  span {
+    color: #c8b03d;
+  }
+
+}

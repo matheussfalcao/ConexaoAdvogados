@@ -10,12 +10,17 @@
     <%= javascript_importmap_tags %>
   </head>
 
+
+
+
   <body>
+
     <% unless current_page?(new_user_session_path) %>
-      <%= render "shared/navbar" %>
+      <div><%= render(Navbar::NavbarComponent.new(title: "my title")) %></div>
     <% end %>
     <%= render "shared/flashes" %>
 
     <%= yield %>
+
   </body>
 </html>

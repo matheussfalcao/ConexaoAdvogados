@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
-  def welcome
-    @user = current_user 
-    render 'welcome'
+  def home
+    @user = current_user
+    render 'home'
+    @page_name = "Empresas"
   end
 end

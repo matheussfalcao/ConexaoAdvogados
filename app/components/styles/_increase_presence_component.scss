@@ -10,6 +10,8 @@
   transition: opacity 0.5s ease, visibility 0.5s ease;
   opacity: 1;
   visibility: visible;
+  user-select: none;
+  caret-color: transparent;
 
   h1 {
   font-weight: 700;

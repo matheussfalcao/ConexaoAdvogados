@@ -2,8 +2,8 @@
 
 class Navbar::NavbarComponent < ViewComponent::Base
 
-  def initialize(title)
-    @title = title
+  def initialize(page_name:)
+    @page_name = page_name
   end
 
 end

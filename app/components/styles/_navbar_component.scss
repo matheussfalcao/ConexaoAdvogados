@@ -11,9 +11,15 @@
     display: flex;
     gap: 30px;
     list-style-type: none;
-    .marker {
-      color: green;
-    }
+  }
+
+  .highlighted {
+    font-weight: 700;
+  }
+
+
+  .nav-item:hover {
+    color: #01385d;
   }
 
   .nav-buttons {

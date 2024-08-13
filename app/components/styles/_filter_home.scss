@@ -1,0 +1,115 @@
+// Container principal para filtros
+.filter-container {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  color: #01385D;
+  font-family: 'Open Sans';
+
+  // Container para o filtro
+  .filter {
+    display: flex;
+    position: absolute;
+    top: 190px;
+    right: 150px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    height: 600px;
+    width: 400px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: -2px 7px 5px rgba(0, 0, 0, 0.25);
+
+    // Botão dentro do filtro
+    .filter-button {
+      align-self: center;
+      width: 334px;
+    }
+  }
+
+  // Estilo para o título
+  h1 {
+    text-align: center;
+    font-size: 30px;
+    width: 315px;
+    font-weight: 900;
+  }
+
+  // Estilo para o parágrafo
+  p {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    width: 270px;
+  }
+
+  // Estilo para o formulário
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    // Estilo para os labels
+    label {
+      align-self: flex-start;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    // Estilo para os selects
+    select {
+      width: 331px;
+      height: 41px;
+      font-size: 12px;
+      padding-left: 12px;
+      padding-right: 40px;
+      background-color: #fff;
+      margin-bottom: 16px;
+      color: #828282;
+      position: relative;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+
+      // Estilo para as opções dentro do select
+      option {
+        font-size: 12px;
+        margin-left: 12px;
+        color: black;
+      }
+
+      // Estilo para o foco no select
+      &:focus-visible {
+        color: black;
+      }
+    }
+  }
+
+  // Estilo específico para Firefox
+  @-moz-document url-prefix() {
+    form select {
+      background-color: #fff;
+      color: #828282;
+      border: 1px solid #767676;
+    }
+  }
+}
+
+// Estilo para o componente customizado do select
+.custom-select {
+  position: relative;
+
+  &:after {
+    content: "⌄";
+    position: absolute;
+    top: 16px;
+    right: 12px;
+    font-size: 24px;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+}

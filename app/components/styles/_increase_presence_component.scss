@@ -14,28 +14,30 @@
   caret-color: transparent;
 
   h1 {
-  font-weight: 700;
-  font-size: 24px;
-  margin-top: 6px;
+    font-weight: 700;
+    font-size: 24px;
+    margin-top: 6px;
   }
+
   p {
-  font-weight: 400;
-  font-size: 16px;
+    font-weight: 400;
+    font-size: 16px;
   }
+
   .close {
     display: flex;
     align-items: center;
     gap: 10rem;
+
     img {
       width: 24px;
       height: 24px;
       cursor: pointer;
     }
   }
-}
 
-
-.offer-box.hidden {
-  opacity: 0;
-  visibility: hidden;
+  &.hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
 }

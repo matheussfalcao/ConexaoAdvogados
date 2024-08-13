@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class PopUp::IncreasePresenceComponent < ViewComponent::Base
+class PopUp::FilterComponent < ViewComponent::Base
 
   def initialize()
     

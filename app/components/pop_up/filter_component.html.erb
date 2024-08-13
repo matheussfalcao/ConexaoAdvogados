@@ -1,0 +1,40 @@
+<div class="filter-container">
+  <div class="filter">
+
+    <h1 class="custom-bold" >Encontre o melhor profissional para suas demandas</h1>
+    <p>Acesse nossa plataforma e conecte-se  com advogados especializados para  garantir a melhor defesa.</p>
+    <form action="">
+      <label for="service">Tipo de serviço</label>
+      <div class="custom-select">
+      <select name="" id="service">
+        <option value="" disabled selected>Selecione um tipo de serviço</option>
+        <option value="">Um</option>
+        <option value="">Dois</option>
+        <option value="">Três</option>
+        <option value="">Quatro</option>
+      </select>
+      </div>
+      <label for="specialty">Especialidade *</label>
+      <div class="custom-select">
+      <select name="" id="specialty">
+        <option value="" disabled selected>Selecione uma especialidade </option>
+        <option value="">Um</option>
+        <option value="">Dois</option>
+        <option value="">Três</option>
+        <option value="">Quatro</option>
+      </select>
+      </div>
+      <label for="location">Localidade *</label>
+      <div class="custom-select">
+      <select name="" id="location">
+        <option value="" disabled selected>Selecione sua região</option>
+        <option value="">Um</option>
+        <option value="">Dois</option>
+        <option value="">Três</option>
+        <option value="">Quatro</option>
+      </select>
+      </div>
+    </form>
+    <%= render(Button::ButtonComponent.new(text: "Procurar advogado", style_class: "primary filter-button")) %>
+  </div>
+</div>

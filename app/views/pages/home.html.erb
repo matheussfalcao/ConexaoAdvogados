@@ -1,12 +1,38 @@
 <div class="home-container">
 
+  <%= render(Banner::BannerComponent.new) %>
 
+  <section class="how-it-works">
+    <div class="texts">
+      <p>Como Funciona?</p>
+      <h1>Etiam nulla lectus amet nunc molestie <span>at vulputate.</span></h1>
+      <p>Neque, pulvinar vestibulum non aliquam.</p>
+    </div>
 
-    <%= render(Banner::BannerComponent.new) %>
+    <div class="cards">
 
+      <div class="card">
+        <%= image_tag 'busque.png', alt: 'busque icon' %>
+        <h3>Busque pelo advogado</h3>
+        <p>Aliquam erat volutpat. Integer malesuada turpis id fringilla suscipit. Maecenas ultrices, orci vitae convallis mattis.</p>
+      </div>
+      <%= image_tag 'wavy_line.png', alt: 'wavy icon' %>
 
-  <section>
-    
+      <div class="card">
+        <%= image_tag 'localize.png', alt: 'busque icon' %>
+        <h3>Localize seu advogado</h3>
+        <p>Aliquam erat volutpat. Integer malesuada turpis id fringilla suscipit. Maecenas ultrices, orci vitae convallis mattis.</p>
+      </div>
+      <%= image_tag 'wavy_line.png', alt: 'wavy icon' %>
+
+      <div class="card">
+        <%= image_tag 'check.png', alt: 'check icon' %>
+        <h3>Aguarde o contato do advogado</h3>
+        <p>Aliquam erat volutpat. Integer malesuada turpis id fringilla suscipit. Maecenas ultrices, orci vitae convallis mattis.</p>
+      </div>
+
+    </div>
+
   </section>
 
 

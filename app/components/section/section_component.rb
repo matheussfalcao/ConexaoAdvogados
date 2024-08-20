@@ -7,4 +7,3 @@ class Section::SectionComponent < ViewComponent::Base
   end
 
 end
-

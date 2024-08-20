@@ -1,0 +1,11 @@
+<%= render(PopUp::FilterComponent.new()) %>
+<div class="home-banner">
+  <div class="increase">
+    <%= render(PopUp::IncreasePresenceComponent.new()) %>
+  </div>
+  <%= image_tag 'home-image-banner.png', class: "home-image-banner", style: "width: 100%; height: 100%; object-fit: cover;" ,alt: 'Banner' %>
+  <div class="text-banner">
+    <h1>A plataforma que faltava para seus <span>serviços jurídicos.</span></h1>
+    <p>Encontre o melhor profissional para suas demandas</p>
+  </div>
+</div>

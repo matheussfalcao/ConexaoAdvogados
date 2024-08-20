@@ -1,0 +1,31 @@
+.navbar-container {
+  background-color: #fff;
+  display: flex;
+  height: 86px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 80px;
+
+  .nav-links {
+    display: flex;
+    gap: 30px;
+    list-style-type: none;
+    margin: 0;
+
+    .nav-item {
+      &:hover {
+        color: #01385d;
+      }
+    }
+
+    .highlighted {
+      font-weight: 700;
+    }
+  }
+
+  .nav-buttons {
+    display: flex;
+    gap: 10px;
+  }
+}

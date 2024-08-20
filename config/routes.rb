@@ -13,5 +13,5 @@ Rails.application.routes.draw do
   post 'email_confirmation/send_confirmation_email_request', to: 'email_confirmation#send_confirmation_email_request'
 
   # Rota raiz
-  root to: 'pages#welcome'
+  root to: 'pages#home'
 end

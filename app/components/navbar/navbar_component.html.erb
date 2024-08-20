@@ -1,0 +1,54 @@
+<% if false %>
+
+<div class="navbar-container">
+  <%= image_tag 'logo.png', alt: 'Logo' %>
+
+  <ul class="nav-links">
+    <% menu_options = { "Home": "/", "Sobre Nós": "/", "Serviços": "/", "Clientes": "/", "Advogados": "/"} %>
+
+    <% menu_options.each do |key, value| %>
+        <li class="nav-item">
+          <% marker = 'highlighted' if key.to_s == @page_name %>
+          <%= key.to_s != @page_name ? (link_to key, value, class: "nav-link #{marker} no-selection") : (content_tag :span, key.to_s, class: "#{marker} no-selection") %>
+        </li>
+    <% end %>
+  </ul>
+
+  <div class="nav-buttons">
+    <%= render(Button::ButtonComponent.new(text: "Cadastrar", style_class: "primary")) %>
+    <%= render(Button::ButtonComponent.new(text: "Login", style_class: "secondary")) %>
+  </div>
+</ul>
+
+<% end %>
+
+
+
+
+<div class="navbar-container">
+  <%= image_tag 'logo.png', alt: 'Logo' %>
+
+  <div class="menu-icon" onclick="toggleMenu()">
+    ☰ <!-- Ícone de menu hambúrguer -->
+  </div>
+
+  <ul class="nav-links">
+    <% menu_options = { "Home": "/", "Sobre Nós": "/", "Serviços": "/", "Clientes": "/", "Advogados": "/"} %>
+
+    <% menu_options.each do |key, value| %>
+        <li class="nav-item">
+          <% marker = 'highlighted' if key.to_s == @page_name %>
+          <%= key.to_s != @page_name ? (link_to key, value, class: "nav-link #{marker} no-selection") : (content_tag :span, key.to_s, class: "#{marker} no-selection") %>
+        </li>
+    <% end %>
+  </ul>
+
+  <div class="nav-buttons">
+    <%= render(Button::ButtonComponent.new(text: "Cadastrar", style_class: "primary")) %>
+    <%= render(Button::ButtonComponent.new(text: "Login", style_class: "secondary")) %>
+  </div>
+
+  <div class="close-icon" onclick="toggleMenu()">
+    × <!-- Ícone de fechar -->
+  </div>
+</div>

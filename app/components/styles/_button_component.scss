@@ -1,0 +1,22 @@
+.btn {
+  width: 160px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+
+  &.primary {
+    background-color: #01385D;
+    color: white;
+  }
+
+  &.secondary {
+    background-color: white;
+    border: 1px solid #01385D;
+    color: #01385D;
+  }
+
+}

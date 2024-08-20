@@ -12,7 +12,9 @@
 
   <body>
     <% unless current_page?(new_user_session_path) %>
-      <%= render "shared/navbar" %>
+      <div>
+        <%= render(Navbar::NavbarComponent.new(page_name: @page_name)) %>
+      </div>
     <% end %>
     <%= render "shared/flashes" %>
 

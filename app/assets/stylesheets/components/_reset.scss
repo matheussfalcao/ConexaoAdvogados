@@ -1,3 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  // font-family: $body-font;
+}
+
 body {
   width: 100vw;
   height: 100vh;
@@ -5,4 +12,9 @@ body {
 
 a {
   text-decoration: none;
+}
+
+.no-selection {
+  user-select: none;
+  caret-color: transparent;
 }

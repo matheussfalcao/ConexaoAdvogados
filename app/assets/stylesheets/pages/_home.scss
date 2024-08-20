@@ -1,1 +1,67 @@
-// Specific CSS for your home-page
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+
+  .increase {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    top: 0;
+    left: 0;
+    color: white;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .how-it-works {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 120px 86px 120px;
+
+    .texts {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      margin-bottom: 64px;
+      text-align: center;
+      width: 700px;
+      h1 {
+        font-weight: 700;
+      }
+      span {
+        color: #C8B03D;
+      }
+    }
+
+    .cards {
+      display: flex;
+      img {
+        width: 323.28px;
+        height: 75.91px;
+      }
+      .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        text-align: center;
+        width: 252px;
+        height: 275px;
+        border: none;
+        img {
+          width: 96.64px;
+          height: 96.64px;
+        }
+      }
+    }
+
+  }
+
+}

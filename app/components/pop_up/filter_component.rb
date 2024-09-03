@@ -2,8 +2,8 @@
 
 class PopUp::FilterComponent < ViewComponent::Base
 
-  def initialize()
-    
+  def initialize
+
   end
 
 end

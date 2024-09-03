@@ -2,8 +2,8 @@
 
 class PopUp::IncreasePresenceComponent < ViewComponent::Base
 
-  def initialize()
-    
+  def initialize
+
   end
 
 end
